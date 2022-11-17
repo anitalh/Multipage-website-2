@@ -1,7 +1,7 @@
 ## Goal
 
 This webpage can be viewed and used by running:
-- `npm install` (only required once on any given computer for each project/assignment)
+- `npm install`
 - `node server.js` (starts the server, Ctrl-C to stop running the server)
 - Visiting `http://localhost:3000/` in the browser
 
