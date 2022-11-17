@@ -1,0 +1,379 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    margin: 0;
+    font-family: sans-serif;
+     background-color: papayawhip;
+}
+
+/** 
+*** header ****
+**/
+
+header{
+    background-color:burlywood;
+    display: grid;
+}
+
+.header-container{
+    width: 69%;
+    display:flex;
+    justify-content:space-between;
+    margin:0;
+    padding: 0;
+}
+
+.skip-to-content-link {
+    left: 50%;
+    position: absolute;
+    transform: translateY(-100%);
+    height: 20px;
+    left: 50%;
+    padding: 1px;
+    position: absolute;
+    transform: translateY(-100%);
+  }
+  
+.skip-to-content-link:focus {
+    transform: translateY(0%);
+  }
+
+.menu{
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.link{
+    text-decoration: none;
+    display: inline-block;
+    padding: 6px 6px;
+    margin: 0;
+    font-weight: bold;
+    color: blue;
+}
+
+.link:focus-within{
+    background-color: #00BFFF;
+    text-decoration: none;
+    border: 1.5px solid blue; 
+    outline: 1px solid white;
+}
+
+.link:hover{
+    background-color: #00BFFF;
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+
+.link:hover, .link:focus-within{
+    color: white;
+}
+
+.hamburger{
+    display: none;
+    position: absolute;
+    left: 95%;
+    top: 25px;
+    background-color: burlywood;
+}
+
+.bar{
+    display: block;
+    width: 29px;
+    height: 2.5px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background-color: black;
+}
+
+/** 
+*** main ****
+**/
+
+.card__holder{
+    width: 97%;
+    padding: 1rem;
+    border: 1px solid black;
+    gap: 1rem;
+    margin: 1rem;
+    background-color: #eee;
+}
+
+.card__title-two{
+    position:relative;
+    left:25%;
+}
+
+.card__text{
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+    
+}
+
+.card__image-one{
+    float:right;
+    text-align: left; 
+    vertical-align: bottom;
+    overflow: hidden;
+}
+
+.card__image-two{
+    float:left; 
+    text-align: right; 
+    vertical-align: bottom;
+    padding-right: 1rem;
+}
+
+.cards{
+    display: flex;
+    justify-content: space-around;
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.card{
+    margin: 1rem;
+    grid-column: span 4;
+    display: flex;
+    border: 1px solid black;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-radius: 1rem;
+    box-shadow: 3px 3px 3px 3px lightgrey;
+    gap: 1rem;
+}
+
+.card:hover{
+    box-shadow: none;
+}
+
+.card__pic{
+    aspect-ratio: 1/1;
+    width: 50%;
+}
+
+.modal{
+    border: 1px solid black;
+    padding: 0.5rem;
+    width: 34%;
+    height: 45%;
+}
+
+/* Style the labels*/
+.register__email-label, .register__confirm-label{
+    display: grid;
+    padding: 10px;
+}  
+
+.register__confirm-label label{
+    position: relative;
+    right: 9%;
+}
+
+.register__email-label label{
+    position: relative;
+    right: 15%;
+}
+
+.register__confirm, .register__email{
+    width: 67%;
+    padding: 0.25rem;
+    border: 1px solid #ccc;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+    cursor: pointer;  
+    gap:1rem;
+    position: relative;
+    left: 20%;
+} 
+
+/* Style the submit button */
+.subscribe, .close{
+    width: 20%;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+    cursor: pointer;
+    padding: 7px 7px;
+    border: 1 px solid black;
+    border-radius: 4px;
+    margin-top: 1.8rem;
+}
+
+.modal::backdrop {
+    background-color: rgb(0 0 0 / 0.8 );
+}
+
+.subscribe{
+    margin-left: 1.5rem;
+    margin-right: 5.5rem;
+    background-color: lime;
+}
+
+.register__email-label.success .register__email, .register__confirm-label.success .register__confirm{
+    border-color: #04AA6D;
+}
+
+.register__email-label.error .register__email, .register__confirm-label.error .register__confirm{
+    border-color: red;
+}
+
+.register__email-label .error, .register__confirm-label .error{
+    color: red;
+}
+
+.close{
+    background-color: lightcoral;
+}
+
+.req{
+    padding-left: 10px;
+}
+
+.events{
+    padding-left: 1rem;
+}
+
+/** 
+*** Footer ***
+ **/
+.footer{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    padding: 1rem;
+    background-color: burlywood;
+    margin: 0;
+    list-style: none;
+}
+
+.footer li{
+    grid-column: span 3;
+    position: relative;
+    bottom: 10%;
+    transform: translateY(0%);
+    font-weight: bold;
+}
+
+.footer li a{
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer li a:focus-within {
+    text-decoration: none;
+    border: 1.5px solid blue; 
+    outline: 1.5px solid white;
+}
+
+/** breakpoint **/
+@media screen and (max-width:44rem){ 
+    .card, .menu li, .footer li{
+       grid-column: span 12;
+    }
+
+    .hamburger{
+        display: block;
+    }
+
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    } 
+
+    .menu{
+        position: fixed;
+        left: -100%;
+        gap: 1rem;
+        flex-direction: column;
+        background-color: black;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    .nav-item{
+        margin: 16px 0;
+    }
+
+    .menu.active{
+        left: 0;
+    }
+
+    .modal{
+        border: 1px solid black;
+        padding: 0.5rem;
+        width: 70%;
+        height: 45%;
+    }
+
+
+    .card__title-two{
+        position:relative;
+        left:23%;
+    }
+
+    .menu li a:focus-within{
+        background-color: #00BFFF;
+        text-decoration: none;
+        border: none; 
+        outline: none;
+    }
+
+    .menu li a:hover{
+        background-color: #00BFFF;
+        text-decoration: none;
+        border: none; 
+        color: white;
+    }
+    
+    .card__text{
+       display: block;   
+    }
+
+    .header-container{
+        width: 100%;
+        display:flex;
+        justify-content:inherit;
+    }
+
+    .header-container h1{
+        padding-left: 1rem;
+    }
+
+    .card__holder{
+        width: 100%;
+        gap:0;
+        margin: 0;
+        padding: 0;
+        border: 0.5px solid black;
+    }
+
+    main{
+        border: 1px solid black;;
+    }
+
+    .header-container img{
+        vertical-align: bottom;
+    }
+
+}
